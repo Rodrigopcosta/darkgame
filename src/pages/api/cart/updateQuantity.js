@@ -6,7 +6,7 @@ export default async function updateQuantityHandler(req, res) {
   try {
     await axios.patch(
       `https://starsoft-challenge-7dfd4a56a575.herokuapp.com/v1/products/${itemId}`,
-      { action },
+      { action }
     );
     res.status(200).json({ success: true });
   } catch (error) {

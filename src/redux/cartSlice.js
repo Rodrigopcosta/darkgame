@@ -17,14 +17,14 @@ const cartSlice = createSlice({
       }
       state.totalQuantity = state.items.reduce(
         (total, item) => total + item.quantity,
-        0,
+        0
       );
     },
     removeItem: (state, action) => {
       state.items = state.items.filter((item) => item.id !== action.payload);
       state.totalQuantity = state.items.reduce(
         (total, item) => total + item.quantity,
-        0,
+        0
       );
     },
     increaseQuantity: (state, action) => {

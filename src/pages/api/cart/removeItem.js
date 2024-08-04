@@ -5,7 +5,7 @@ export default async function removeItemHandler(req, res) {
 
   try {
     await axios.delete(
-      `https://starsoft-challenge-7dfd4a56a575.herokuapp.com/v1/products/${itemId}`,
+      `https://starsoft-challenge-7dfd4a56a575.herokuapp.com/v1/products/${itemId}`
     );
     res.status(200).json({ success: true });
   } catch (error) {

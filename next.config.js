@@ -1,5 +1,10 @@
 module.exports = {
   images: {
-    domains: ['softstar.s3.amazonaws.com'], 
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'softstar.s3.amazonaws.com',
+      },
+    ],
   },
 };

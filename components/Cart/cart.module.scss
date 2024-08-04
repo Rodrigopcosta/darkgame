@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import '../../src/styles/variables/variables';
 @import '../../src/styles/mixins/mixins';
-@import '../../src/styles/functions/functions';
 
 .LoadSection {
   // Centraliza o conteúdo e define a altura e largura totais
@@ -30,10 +29,6 @@
     align-items: center;
     justify-content: center;
     padding: $padding-default;
-
-
-
-
 
     .headerContainer {
       // Estiliza o cabeçalho do carrinho

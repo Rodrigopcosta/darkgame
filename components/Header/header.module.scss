@@ -1,7 +1,6 @@
-@import "../../src/styles/variables/variables";
-@import "../../src/styles/mixins/mixins";
-@import "../../src/styles/functions/functions";
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+@import '../../src/styles/variables/variables';
+@import '../../src/styles/mixins/mixins';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 
 .headerSection {
   @include flex-center;

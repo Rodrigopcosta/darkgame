@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './main.module.scss';
-import { Card } from './Card/card'; 
-import { useFetchProducts } from '../../src/hooks/useCart'; 
+import { Card } from './Card/card';
+import { useFetchProducts } from '../../src/hooks/useCart';
 import Load from '../Load/Load';
 
 function Main() {

@@ -1,7 +1,7 @@
-import styles from "./card.module.scss";
-import Image from "next/image";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../../src/redux/cartSlice";
+import styles from './card.module.scss';
+import Image from 'next/image';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../../src/redux/cartSlice';
 
 export function Card({ id, imageSrc, imageAlt, price, name, description }) {
   const dispatch = useDispatch();

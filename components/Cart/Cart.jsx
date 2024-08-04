@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion"; // Importando Framer Motion
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion'; // Importando Framer Motion
 import confetti from 'canvas-confetti'; // Importando canvas-confetti
-import styles from "./cart.module.scss";
-import Image from "next/image";
-import CartItems from "./CardItems/cardItems";
-import { clearCart } from "../../src/redux/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import styles from './cart.module.scss';
+import Image from 'next/image';
+import CartItems from './CardItems/cardItems';
+import { clearCart } from '../../src/redux/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Cart({ isVisible, onClose }) {
   // Estado para controlar se a compra foi finalizada
@@ -27,11 +27,11 @@ function Cart({ isVisible, onClose }) {
     };
 
     if (isVisible) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isVisible, onClose]);
 
@@ -110,7 +110,7 @@ function Cart({ isVisible, onClose }) {
                   {cartData.reduce(
                     (acc, item) => acc + item.price * item.quantity,
                     0
-                  )}{" "}
+                  )}{' '}
                   ETH
                 </p>
               </div>
@@ -120,7 +120,7 @@ function Cart({ isVisible, onClose }) {
           <div className={styles.finalizePurchase}>
             <button onClick={handleFinalizePurchase}>
               <span>
-                {isPurchaseCompleted ? "COMPRA FINALIZADA" : "FINALIZAR COMPRA"}
+                {isPurchaseCompleted ? 'COMPRA FINALIZADA' : 'FINALIZAR COMPRA'}
               </span>
             </button>
           </div>

@@ -1,11 +1,11 @@
-import styles from "./cardItems.module.scss";
-import Image from "next/image";
-import { useDispatch } from "react-redux";
+import styles from './cardItems.module.scss';
+import Image from 'next/image';
+import { useDispatch } from 'react-redux';
 import {
   increaseQuantity,
   decreaseQuantity,
   removeItem,
-} from "../../../src/redux/cartSlice";
+} from '../../../src/redux/cartSlice';
 
 function CartItems({ item }) {
   const dispatch = useDispatch();
@@ -25,14 +25,14 @@ function CartItems({ item }) {
         <div className={styles.content}>
           <div className={styles.imageItem}>
             <div>
-            <Image
-              className={styles.image}
-              src={item.imageSrc}
-              alt={item.imageAlt}
-              width={139}
-              height={139}
-              priority
-            />
+              <Image
+                className={styles.image}
+                src={item.imageSrc}
+                alt={item.imageAlt}
+                width={139}
+                height={139}
+                priority
+              />
             </div>
           </div>
           <div className={styles.infoItemContainer}>
@@ -72,7 +72,7 @@ function CartItems({ item }) {
                     onClick={handleDecreaseQuantity}
                   >
                     <Image
-                    className={styles.image}
+                      className={styles.image}
                       src="/images/Sub.svg"
                       alt="Subtract"
                       width={16}

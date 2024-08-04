@@ -1,14 +1,12 @@
 import {
-  useFetchProducts,
   useAddItem,
   useRemoveItem,
   useUpdateQuantity,
-} from '../src/hooks/useCart';
+} from '../../hooks/useCart';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearCart } from '../src/redux/cartSlice';
+import { clearCart } from '../../redux/cartSlice';
 
 function CartPage() {
-  const { data: products } = useFetchProducts();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 

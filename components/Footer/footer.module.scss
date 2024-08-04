@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
-@import "../../src/styles/variables/variables";
-@import "../../src/styles/mixins/mixins";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import '../../src/styles/variables/variables';
+@import '../../src/styles/mixins/mixins';
 
 .footerSection {
   @include footer-style($padding-horizontal);

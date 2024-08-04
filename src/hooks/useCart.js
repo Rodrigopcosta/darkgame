@@ -24,7 +24,7 @@ export const useAddItem = () => {
       onSuccess: (data) => {
         dispatch(addItem(data));
       },
-    },
+    }
   );
 };
 
@@ -40,7 +40,7 @@ export const useRemoveItem = () => {
       onSuccess: () => {
         dispatch(removeItem(itemId));
       },
-    },
+    }
   );
 };
 
@@ -63,6 +63,6 @@ export const useUpdateQuantity = () => {
           dispatch(decreaseQuantity(itemId));
         }
       },
-    },
+    }
   );
 };
