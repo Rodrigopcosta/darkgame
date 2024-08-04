@@ -1,0 +1,142 @@
+// Mixins
+
+// Flexbox mixins
+@mixin flex-center($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-space-between {
+  @include flex-center(row, center, space-between);
+}
+
+@mixin flex-column-center {
+  @include flex-center(column, center, center);
+}
+
+// Dimension mixins
+@mixin set-dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Card section mixin
+@mixin card-section {
+  @include set-dimensions($card-section-width, $card-section-height);
+  @include flex-center(column, center, center);
+  gap: $card-section-gap;
+  border-radius: $card-section-radius;
+  background: $card-section-bg;
+  box-shadow: $card-section-shadow;
+}
+
+// Image mixins
+@mixin image-container {
+  @include set-dimensions(100%, auto);
+  min-width: $image-container-min-width;
+  min-height: $image-container-min-height;
+  @include flex-center(row, center, center);
+  gap: 31px;
+}
+
+@mixin image-content {
+  @include set-dimensions(296px, auto);
+  min-height: $image-container-min-height;
+  border-radius: $card-section-radius;
+  background: $image-content-bg;
+}
+
+// Info card container mixin
+@mixin info-card-container {
+  @include set-dimensions(100%, auto);
+  @include flex-center;
+  min-width: $info-card-container-min-width;
+  min-height: $info-card-container-min-height;
+  gap: 19px;
+}
+
+// Buy section mixin
+@mixin buy-section {
+  @include set-dimensions(296px, auto);
+  min-height: $buy-section-min-height;
+  margin-top: 20px;
+  gap: 24px;
+}
+
+// Button style mixin
+@mixin button-style(
+  $bg-color,
+  $text-color,
+  $padding: 10px 26px,
+  $border-radius: 8px
+) {
+  @include flex-center;
+  @include set-dimensions(100%, 66px);
+  min-width: 296px;
+  background: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: none;
+  box-shadow: $button-shadow;
+  cursor: pointer;
+  transition: background-color $transition-duration;
+  gap: 10px;
+
+  &:hover {
+    background: darken($bg-color, 10%);
+  }
+}
+
+// Responsive width mixin
+@mixin responsive-width($mobile: 100%, $tablet: 80%, $desktop: 90%) {
+  @media (min-width: 1200px) {
+    width: $desktop;
+  }
+
+  @media (max-width: 1200px) {
+    width: $tablet;
+  }
+
+  @media (max-width: 900px) {
+    width: $mobile;
+  }
+}
+
+// Grid layout mixin
+@mixin grid-layout($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap-large;
+}
+
+// Company info style mixin
+@mixin company-info-style(
+  $font-size,
+  $line-height,
+  $letter-spacing,
+  $color,
+  $font-family
+) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+  font-weight: $font-weight-semimedium; // Usa a variável de peso de fonte
+  font-family: $font-family;
+}
+
+// Footer style mixins
+@mixin footer-style($padding) {
+  @include flex-center(row, center, center);
+  width: 100%;
+  padding: $padding;
+}
+
+@mixin footer-container-style($max-width) {
+  @include flex-center(row, center, center);
+  @include set-dimensions(100%, auto);
+  max-width: $max-width;
+}

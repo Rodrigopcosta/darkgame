@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+@import "../../src/styles/variables/variables";
+@import "../../src/styles/mixins/mixins";
+
+.footerSection {
+  @include footer-style($padding-horizontal);
+
+  .footerContainer {
+    @include footer-container-style($footer-max-width);
+
+    .companyInfo {
+      @include company-info-style(
+        $font-size-xsmall,
+        $line-height-large,
+        $letter-spacing-small,
+        $color-footer,
+        $font-family-ibm-plex
+      );
+      width: 386px;
+      height: 26px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  /* Media Queries para ajustar a responsividade */
+  @media (max-width: 1200px) {
+    .footerContainer {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: center;
+
+      .companyInfo {
+        @include company-info-style(
+          $font-size-medium,
+          $line-height-medium,
+          $letter-spacing-medium,
+          $color-light,
+          $font-family-ibm-plex
+        );
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footerContainer {
+      padding: 0 $padding-extra-small;
+
+      .companyInfo {
+        @include company-info-style(
+          $font-size-small,
+          $line-height-small,
+          $letter-spacing-small,
+          $color-light,
+          $font-family-ibm-plex
+        );
+        white-space: wrap;
+        text-overflow: clip;
+      }
+    }
+  }
+}

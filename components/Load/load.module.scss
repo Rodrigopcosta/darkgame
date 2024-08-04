@@ -1,0 +1,58 @@
+@import '../../src/styles/variables/variables';
+@import '../../src/styles/mixins/mixins';
+
+// Contêiner principal de carregamento
+.loadContainer {
+  @include set-dimensions(100%, auto);
+  @include flex-center(column, center, center);
+  max-width: 403px;
+  min-height: 107px;
+  gap: 11px;
+  margin: 100px auto;
+
+  .bar {
+    @include set-dimensions(100%, $bar-height);
+    @include flex-center(column, flex-start, center);
+    max-width: 403px;
+    border-radius: $border-radius;
+    background: $background-color;
+    gap: 10px;
+    position: relative;
+
+    .orangeBar {
+      @include set-dimensions(189px, $bar-height);
+      border-radius: $border-radius;
+      background: $color-orange;
+      transition: width $transition-duration ease; // Animação de transição
+    }
+
+    .full {
+      width: 100%; // Define a largura total quando carregado
+    }
+  }
+
+  .loadBtn {
+    @include set-dimensions(100%, 86px);
+    max-width: 403px;
+    border-radius: $border-radius;
+    @include flex-center;
+    gap: 10px;
+    background-color: $background-color;
+    border: none;
+
+    button {
+      width: 100%;
+      background-color: $background-color;
+      border: none;
+      cursor: pointer;
+
+      span {
+        font-size: $font-size-large;
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-large;
+        text-align: left;
+        color: $color-white;
+      }
+    }
+  }
+}

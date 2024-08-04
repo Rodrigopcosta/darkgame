@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import '../../src/styles/variables/variables';
+@import '../../src/styles/mixins/mixins';
+@import '../../src/styles/functions/functions';
+
+.LoadSection {
+  // Centraliza o conteúdo e define a altura e largura totais
+  @include flex-center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 690px) {
+    @include flex-center;
+  }
+
+  .LoadContainer {
+    // Define as dimensões, bordas e background do container principal
+    @include set-dimensions(679px, auto);
+    min-height: 900px;
+    border-radius: $border-radius-small;
+    background: $color-dark;
+    box-shadow: -29px 0px 9.8px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-default;
+
+
+
+
+
+    .headerContainer {
+      // Estiliza o cabeçalho do carrinho
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: $padding-default 0;
+      margin-bottom: $padding-default;
+
+      .backBtn {
+        // Botão de voltar
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        .arrowLeft {
+          // Estiliza o ícone da seta
+          @include set-dimensions($back-button-size, $back-button-size);
+          padding: $padding-small;
+          background-color: $color-dark-gray;
+          border-radius: $border-radius-circle;
+        }
+      }
+
+      p {
+        // Estiliza o título do cabeçalho
+        width: 253px;
+        height: 26px;
+        font-size: $font-size-xlarge;
+        font-weight: $font-weight-medium;
+        line-height: 26.4px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    .LoadContent {
+      // Estiliza o conteúdo principal do carrinho
+      @include set-dimensions(auto, auto);
+      max-width: 620px;
+      max-height: 682px;
+      @include flex-space-between();
+      flex-direction: column;
+      gap: 70px;
+
+      @media (max-width: 690px) {
+        width: 100%;
+        @include flex-center(column);
+      }
+
+      .mainLoadContainer {
+        // Container principal dos itens do carrinho
+        @include set-dimensions(620px, auto);
+        min-height: 427px;
+        overflow: hidden;
+        overflow-y: auto;
+        display: flex;
+        justify-content: center;
+        border-radius: $border-radius;
+        gap: 27px;
+
+        &::-webkit-scrollbar {
+          width: 8px; /* Largura da barra de rolagem */
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #373737;
+          border-radius: 10px; /* Bordas arredondadas da trilha */
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $light-gray; /* Cor do polegar da barra de rolagem */
+          border-radius: 10px; /* Bordas arredondadas do polegar */
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background: $color-orange; /* Cor do polegar quando está em foco */
+        }
+
+        @media (max-width: 690px) {
+          @include set-dimensions(100%, auto);
+          max-width: 450px;
+          @include flex-center(column);
+        }
+
+        .mainLoad {
+          // Estiliza a lista de itens do carrinho
+          @include set-dimensions(619px, 682px);
+          @include flex-center(column);
+
+          @media (max-width: 690px) {
+            max-width: 500px;
+          }
+
+          .itensContainer {
+            // Container dos itens do carrinho
+            @include set-dimensions(619px, 200px);
+            min-height: 427px;
+            border-radius: $border-radius;
+            padding: 17px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+
+      .amountContainer {
+        // Container do total do carrinho
+        width: auto;
+        max-width: 579px;
+        height: auto;
+        min-height: 34px;
+        gap: 380px;
+        display: flex;
+
+        div {
+          // Subcontainer para o total e valor
+          width: auto;
+          max-width: 579px;
+          height: auto;
+          min-height: 34px;
+          gap: 380px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @media (max-width: 690px) {
+            width: 100%;
+            @include flex-center(row, center, space-between);
+            gap: 30px;
+          }
+
+          p {
+            // Estiliza o texto do total
+            width: 73px;
+            height: 26px;
+            font-size: $font-size-xlarge;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-large;
+            letter-spacing: -1px;
+            text-align: left;
+          }
+
+          .amount {
+            // Estiliza o valor total do carrinho
+            width: 100%;
+            min-width: 126px;
+            height: auto;
+            min-height: $min-height-xsmall;
+            gap: $gap-xsmall;
+            display: flex;
+            align-items: center;
+
+            p {
+              // Estiliza o texto do valor total
+              @include set-dimensions(100%, 26px);
+              min-width: 82px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: $font-size-xlarge;
+              font-weight: $font-weight-semibold;
+              line-height: 26.4px;
+              text-align: left;
+              color: $color-light;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+
+      .finalizePurchase {
+        // Container para o botão de finalizar compra
+        width: auto;
+        max-width: 620px;
+        height: auto;
+        min-height: 81px;
+        @include flex-center;
+        gap: 52px;
+        border-radius: $border-radius;
+
+        button {
+          // Estiliza o botão de finalizar compra
+          @include button-style(
+            $color-orange,
+            $button-color,
+            $button-padding,
+            $border-radius
+          );
+          width: 620px;
+          height: 81px;
+
+          @media (max-width: 690px) {
+            width: 320px;
+          }
+
+          span {
+            // Estiliza o texto dentro do botão
+            min-width: 155px;
+            height: 22px;
+            font-family: $font-family-lato;
+            font-size: $font-size-small;
+            font-weight: $font-weight-bold;
+            line-height: 22.4px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries para telas menores
+@media (max-width: 690px) {
+  .LoadSection {
+    .LoadContainer {
+      width: 95vw;
+      max-height: 95vh;
+      padding: $padding-mobile;
+
+      .headerContainer {
+        .backBtn {
+          left: 2%;
+
+          .arrowLeft {
+            @include set-dimensions(35px, 35px);
+          }
+        }
+
+        p {
+          font-size: $font-size-medium;
+        }
+      }
+
+      .amountContainer {
+        p {
+          font-size: $font-size-small;
+        }
+
+        .amount {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .LoadSection {
+    .LoadContainer {
+      width: 93%;
+      height: 90vh;
+      max-height: none;
+      padding: $padding-mobile;
+
+      .headerContainer {
+        padding: $padding-small 0;
+        margin-bottom: $padding-small;
+
+        .backBtn {
+          .arrowLeft {
+            @include set-dimensions(40px, 40px);
+            padding: $padding-extra-small;
+            background-color: $color-dark-gray;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        p {
+          font-size: $font-size-medium;
+          line-height: $line-height-medium;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .LoadSection {
+    .LoadContainer {
+      width: 100vw;
+      height: 100vh;
+      padding: $padding-extra-small;
+
+      .headerContainer {
+        .backBtn {
+          left: 1%;
+
+          .arrowLeft {
+            @include set-dimensions(30px, 30px);
+          }
+        }
+
+        p {
+          font-size: $font-size-xsmall;
+        }
+      }
+
+      .amountContainer {
+        p {
+          font-size: $font-size-xsmall;
+        }
+
+        .amount {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

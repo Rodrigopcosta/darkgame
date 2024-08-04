@@ -1,0 +1,140 @@
+// src/styles/variables/variables.scss
+
+// Cores
+$color-dark: #232323;
+$color-light: #f0f0f0;
+$color-white: #ffffff;
+$color-orange: #ff8310;
+$color-dark-gray: #373737;
+$background-color: #393939;
+$background-color-item: #2b2b2b;
+$secondary-color: #232323;
+$dark-gray: #22232c;
+$light-gray: #cccccc;
+$color-footer: #ffffff70;
+
+// Fontes
+$font-family-ibm-plex: 'IBM Plex Sans', sans-serif;
+$font-family-lato: 'Lato', sans-serif;
+
+// Tamanhos de Fonte
+$font-size-xlarge: 24px;
+$font-size-large: 20px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-xsmall: 14px;
+
+// Pesos de Fonte
+$font-weight-light: 300;
+$font-weight-semimedium: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Alturas de Linha
+$line-height-small: 12px;
+$line-height-medium: 20px;
+$line-height-large: 26px;
+$line-height-default: 25.2px;
+
+// Espaçamento & Dimensões
+$padding-horizontal: 20px;
+$padding-default: 20px;
+$padding-mobile: 15px;
+$padding-small: 10px;
+$padding-extra-small: 5px;
+$gap-xsmall: 10px;
+$gap-small: 16px;
+$gap-large: 25px;
+$gap-xlarge: 31px;
+$btn-height: 49px;
+$btn-height-medium: 86px;
+$min-width-small: 367px;
+$min-width-medium: 559px;
+$min-height-xsmall: 34px;
+$min-height-small: 49px;
+$min-height-medium: 161px;
+
+// Bordas & Raio
+$border-radius: 8px;
+$border-radius-small: 5px;
+$border-radius-circle: 30px;
+$border-color: rgba(255, 255, 255, 0.21);
+
+// Sombras
+$box-shadow: 0px 50px 100px -20px #32325d40;
+
+// Larguras Máximas
+$max-width: 1728px;
+$main-container-max-width: 1455px;
+$footer-max-width: 1728px;
+
+// Laguras Minimas
+$min-width-cart: 74px;
+$min-width-shopcart: 54px;
+
+// Alturas
+$header-height: 100px;
+$bar-height: 10px;
+
+// Alturas Minimas
+$min-height-cart: 53px;
+$min-height-shopcart: 33px;
+
+// Seção do Card
+$card-section-width: 345px;
+$card-section-height: 555px;
+$card-section-radius: 8px;
+$card-section-bg: rgba(25, 26, 32, 1);
+$card-section-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+$card-section-gap: 20px;
+
+// Container de Imagem
+$image-container-min-width: 345px;
+$image-container-min-height: 258px;
+$image-content-bg: #22232c;
+$image-padding: 31px 37px;
+
+// Container de Info Card
+$info-card-container-min-width: 345px;
+$info-card-container-min-height: 196px;
+$title-font-size: 18px;
+$title-font-weight: 500;
+$title-line-height: 26px;
+$title-color: #fff;
+$description-font-size: 12px;
+$description-font-weight: 300;
+$description-color: #cccccc;
+$buy-section-min-height: 139px;
+$buy-info-min-width: 104px;
+$buy-info-min-height: 29px;
+$buy-info-font-size: 20px;
+$buy-info-font-weight: 600;
+$buy-info-color: #f0f0f0;
+
+// Botão
+$button-bg: #ff8310;
+$button-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25);
+$button-color: #fff;
+$button-padding: 10px 26px;
+$button-font-size: 16px;
+$button-font-weight: 600;
+$back-button-size: 60px;
+
+// Transições
+$transition-duration: 0.3s;
+
+// Espaçamento de Letra
+$letter-spacing-small: 0.5px;
+$letter-spacing-medium: 1px;
+
+// Variáveis antigas atualizadas para novas
+$bg-color: $background-color;
+$orange-color: $color-orange;
+$text-color: $color-light;
+
+$font-family: $font-family-ibm-plex;
+$font-size: $font-size-large;
+$font-weight: $font-weight-semimedium;
+$line-height: $line-height-large;
+$letter-spacing: $letter-spacing-medium;

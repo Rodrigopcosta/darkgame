@@ -1,0 +1,101 @@
+@import "../../../src/styles/variables/variables";
+@import "../../../src/styles/mixins/mixins";
+
+.cardSection {
+  @include card-section;
+
+  @media (max-width: 360px) {
+    width: 320px;
+  }
+
+  .imageContainer {
+    @include image-container;
+
+    .imageContent {
+      @include image-content;
+
+      .imageItem {
+        @include set-dimensions(296px, 258px);
+        @include flex-center;
+        max-width: 345px;
+        min-height: 258px;
+        gap: 31px;
+
+        .image {
+          width: 296px;
+          height: 258px;
+          border-radius: 4px;          
+        }
+      }
+    }
+  }
+
+  .infoCardContainer {
+    @include info-card-container;
+
+    .titleAndPrice {
+      @include set-dimensions(100%, auto);
+      @include flex-center(column, flex-start, center);
+      max-width: 296px;
+      min-height: $info-card-container-min-height;
+      gap: 10px;
+
+      h2 {
+        min-width: 118px;
+        height: 25px;
+        font-weight: $title-font-weight;
+        font-size: $title-font-size;
+        line-height: $line-height-default;
+        color: $title-color;   
+        margin-bottom: 25px;     
+      }
+
+      p {
+        width: 296px;
+        height: 12px;
+        font-size: $description-font-size;
+        font-weight: $description-font-weight;
+        line-height: 12px;
+        text-align: left;
+        color: $description-color;
+        gap: 0px;
+        @include flex-center(row, center)
+      }
+
+      .buySection {
+        @include buy-section;
+        @include flex-center(column, flex-start, center);
+
+        .buyInfo {
+          @include set-dimensions(auto, auto);
+          @include flex-center;
+          min-width: $buy-info-min-width;
+          min-height: $buy-info-min-height;
+          gap: 10px;
+
+          p {
+            min-width: 65px;
+            height: 22px;
+            font-size: $buy-info-font-size;
+            font-weight: $buy-info-font-weight;
+            line-height: 22px;
+            text-align: left;
+            color: $buy-info-color;
+          }
+        }
+
+        button {
+          @include button-style($button-bg, $button-color);
+
+          span {
+            width: 81px;
+            height: 22px;
+            font-size: $button-font-size;
+            font-weight: $button-font-weight;
+            line-height: 22.4px;
+          }
+        }
+      }
+    }
+  }
+}

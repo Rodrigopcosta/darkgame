@@ -1,0 +1,60 @@
+@import "../../src/styles/variables/variables";
+@import "../../src/styles/mixins/mixins";
+@import "../../src/styles/functions/functions";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+.headerSection {
+  @include flex-center;
+  width: 100%;
+  height: $header-height;
+  background: $color-dark;
+  border-bottom: 1px solid $border-color;
+  padding: 0 $padding-horizontal;
+  position: fixed;
+
+  .content {
+    @include flex-space-between;
+    @include set-dimensions($max-width, $header-height);
+
+    div {
+      @include flex-center;
+      @include set-dimensions(119.88px, 19px);
+    }
+
+    .shopCartContainer {
+      @include set-dimensions(auto, auto);
+      min-width: $min-width-cart;
+      min-height: $min-height-cart;
+      padding: 10px;
+      @include flex-center;
+      gap: 10px;
+
+      .shopCart {
+        @include set-dimensions(auto, auto);
+        min-width: $min-width-shopcart;
+        min-height: $min-height-shopcart;
+        gap: 9px;
+        @include flex-center;
+
+        .shopCartImage {
+          cursor: pointer;
+
+          &:active {
+            opacity: 0.8;
+          }
+        }
+
+        p {
+          width: 12px;
+          height: $title-line-height;
+          font-family: $font-family-ibm-plex;
+          font-size: $font-size-large;
+          font-weight: $font-weight-semimedium;
+          line-height: $line-height-large;
+          letter-spacing: -0.2926828861236572px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
