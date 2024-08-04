@@ -1,4 +1,4 @@
-# Marketplace de NFTs 📦
+# Marketplace de NFTs
 
 Este é um projeto [Next.js](https://nextjs.org/) iniciado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -6,7 +6,6 @@ Este é um projeto [Next.js](https://nextjs.org/) iniciado com [`create-next-app
 
 - [Introdução](#introdução)
 - [Iniciando](#iniciando)
-- [Estrutura do Projeto](#estrutura-do-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Aprenda Mais](#aprenda-mais)
 - [Agradecimentos](#agradecimentos)
@@ -15,7 +14,7 @@ Este é um projeto [Next.js](https://nextjs.org/) iniciado com [`create-next-app
 
 Este projeto é um marketplace de NFTs que oferece uma experiência completa de compra, incluindo funcionalidades avançadas de carrinho de compras. Ele apresenta uma interface estilizada e moderna, com animações suaves e interativas para melhorar a experiência do usuário.
 
-## Iniciando 🚀
+## Iniciando
 
 Para começar a desenvolver, siga os passos abaixo:
 
@@ -49,7 +48,7 @@ Para começar a desenvolver, siga os passos abaixo:
 
 3. **Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.**
 
-## Tecnologias Utilizadas 🛠️
+## Tecnologias Utilizadas
 
 - **Redux:** Gerenciamento de estado global.
 - **React Query:** Busca e sincronização de dados da API.
@@ -57,7 +56,7 @@ Para começar a desenvolver, siga os passos abaixo:
 - **SASS:** Estilização modular e reutilizável.
 - **Docker e Docker Compose:** Configuração do ambiente de desenvolvimento.
 
-## Aprenda Mais 📚
+## Aprenda Mais
 
 Para aprender mais sobre o Next.js, confira os seguintes recursos:
 
@@ -65,6 +64,6 @@ Para aprender mais sobre o Next.js, confira os seguintes recursos:
 - [Aprenda Next.js](https://nextjs.org/learn) - Um tutorial interativo sobre Next.js.
 - [Repositório no GitHub do Next.js](https://github.com/vercel/next.js/) - Seus feedbacks e contribuições são bem-vindos!
 
-## Agradecimentos 🤝
+## Agradecimentos
 
 Gostaria de expressar minha sincera gratidão à [Starsoft](https://starsoft.com.br/) pela criação e fornecimento deste desafio. O trabalho da equipe da Starsoft foi essencial para o desenvolvimento e aprimoramento deste projeto, proporcionando uma experiência enriquecedora e desafiadora.
