@@ -19,12 +19,14 @@ docker pull rodrigocosta831/myapp:latest
 ```
 
 - 2. Executar o Container Docker
+
 Após baixar a imagem, você pode executar um container Docker usando a imagem. Utilize o seguinte comando para iniciar o container:
 
 Primeiro, baixe a imagem Docker do Docker Hub usando o seguinte comando:
 
 ```bash
-docker run -d -p 8080:80 rodrigocosta831/myapp:latest
+docker run -p 3000:3000 rodrigocosta831/myapp:latest
+
 ```
 Este comando iniciará o container no modo desacoplado (-d) e mapeará a porta 8080 da sua máquina local para a porta 80 do container.
 
@@ -32,5 +34,5 @@ Este comando iniciará o container no modo desacoplado (-d) e mapeará a porta 8
 Uma vez que o container esteja em execução, você pode acessar a aplicação abrindo um navegador web e navegando para:
 
 ```bash
-http://localhost:8080
+http://localhost:3000
 ```
