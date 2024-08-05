@@ -1,29 +1,36 @@
-# Instruções para Rodar a Aplicação Dockerizada
+# Instruções de Deploy
 
-## Requisitos
+## Visão Geral
 
-- Docker instalado no seu sistema.
+Este documento fornece instruções para implantar e executar o projeto usando Docker. A imagem Docker para este projeto está hospedada no Docker Hub.
 
-## Rodando a Aplicação
+## Pré-requisitos
 
-1. **Puxe a Imagem Docker**:
+- Docker instalado na sua máquina local. Você pode baixar o Docker [aqui](https://www.docker.com/get-started).
 
-   ```bash
-   docker pull rodrigocosta831/my-app:latest
+## Passos para o Deploy
 
-   ```
+- 1. Baixar a Imagem Docker
 
-2. **Execute o Contêiner**:
+Primeiro, baixe a imagem Docker do Docker Hub usando o seguinte comando:
 
-   ```bash
-   docker run -p 3000:3000 rodrigocosta831/my-app:latest
+```bash
+docker pull rodrigocosta831/myapp:latest
+```
 
-   ```
+- 2. Executar o Container Docker
+Após baixar a imagem, você pode executar um container Docker usando a imagem. Utilize o seguinte comando para iniciar o container:
 
-3. **Execute o Contêiner**:
-   ```bash
-   Abra seu navegador e vá para http://localhost:3000.
-   ```
-   ## Notas Adicionais
-   -Certifique-se de que a porta 3000 não está sendo usada por outra aplicação.
-   -Consulte a documentação do Docker para obter mais informações sobre o uso -de contêineres.
+Primeiro, baixe a imagem Docker do Docker Hub usando o seguinte comando:
+
+```bash
+docker run -d -p 8080:80 rodrigocosta831/myapp:latest
+```
+Este comando iniciará o container no modo desacoplado (-d) e mapeará a porta 8080 da sua máquina local para a porta 80 do container.
+
+- 3. Acessar a Aplicação
+Uma vez que o container esteja em execução, você pode acessar a aplicação abrindo um navegador web e navegando para:
+
+```bash
+http://localhost:8080
+```
